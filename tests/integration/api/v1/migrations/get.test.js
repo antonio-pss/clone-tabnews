@@ -1,10 +1,10 @@
 import database from "infra/database.js";
-import orchestrator from "../orchestrator";
+import orchestrator from "tests/orchestrator.js";
 
 
 beforeAll(async () => {
   await orchestrator.waitForAllServices();
-  await database.query("DROP schema public CASCADE; CREATE schema public");
+  await orchestrator.clearDatabase();
 });
 
 test("GET to /api/v1/migrations should return 200", async () => {

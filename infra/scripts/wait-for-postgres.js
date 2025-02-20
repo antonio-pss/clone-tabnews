@@ -5,12 +5,12 @@ function checkPostgres() {
 
   function handleReturn(error, stdout) {
     if (stdout.search("accepting connections") === -1) {
-      process.stdout.write(".")
+      process.stdout.write(".");
       checkPostgres();
       return;
     }
 
-    console.log("\nPostgres está pronto e aceitando conexões!")
+    console.log("\nPostgres está pronto e aceitando conexões!");
   }
 }
 

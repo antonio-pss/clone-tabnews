@@ -1,5 +1,4 @@
 import database from "infra/database.js";
-import { parseRelativeUrl } from "next/dist/shared/lib/router/utils/parse-relative-url";
 
 async function status(request, response) {
   const updatedAt = new Date().toISOString();
